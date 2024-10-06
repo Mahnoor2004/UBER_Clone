@@ -27,6 +27,9 @@
             android:name=".SignalActivity"
             android:exported="true" />
 
+        <!-- LoginActivity runs after SignalActivity -->
+        <activity android:name=".LoginActivity"
+            android:exported="true" />
         <!-- MainActivity runs after SignalActivity -->
         <activity
             android:name=".MainActivity"

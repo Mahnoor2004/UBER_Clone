@@ -28,10 +28,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Get started with uber"
-            android:textSize="38sp"
+            android:textSize="35sp"
             android:textStyle="bold"
             android:textColor="@android:color/darker_gray"
-            android:gravity="center"
+            android:gravity="start"
             android:layout_marginBottom="16dp" />
 
         <!-- Button to continue, as wide as TextView -->
@@ -40,11 +40,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Continue"
+            android:fontFamily="@string/material_motion_easing_standard"
             android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="27sp"
+            android:textSize="20sp"
             android:textColor="@android:color/black"
             android:padding="10dp"
-            android:background="@android:color/darker_gray" />
+            android:background="@drawable/signal_button"/>
     </LinearLayout>
 </LinearLayout>

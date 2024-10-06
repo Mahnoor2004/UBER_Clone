@@ -15,8 +15,8 @@ class SignalActivity : AppCompatActivity() {
 
         val continueButton: Button = findViewById(R.id.continue_button)
         continueButton.setOnClickListener {
-            // Navigate to MainActivity
-            val intent = Intent(this, MainActivity::class.java)
+            // Navigate to LoginActivity
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
