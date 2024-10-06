@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- ImageView to cover 80% of the screen -->
+    <ImageView
+        android:id="@+id/photo_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:scaleType="centerCrop"
+        android:src="@drawable/traffic_light" /> <!-- Replace with your image -->
+
+    <!-- LinearLayout to contain TextView and Button (covers remaining 20%) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@android:color/black">
+        <!-- TextView for the message -->
+        <TextView
+            android:id="@+id/message_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get started with uber"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Button to continue, as wide as TextView -->
+        <Button
+            android:id="@+id/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="27sp"
+            android:textColor="@android:color/black"
+            android:padding="10dp"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+</LinearLayout>
