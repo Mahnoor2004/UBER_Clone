@@ -9,14 +9,13 @@ import androidx.appcompat.app.AppCompatActivity
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash) // Make sure you have activity_splash.xml layout for this
+        setContentView(R.layout.activity_splash)
 
-        // Use a Handler to delay the splash screen
+        // Delay to display the splash screen for 2 seconds
         Handler(Looper.getMainLooper()).postDelayed({
-            // Start the MainActivity
+            // Start the SignalActivity after the splash screen
             startActivity(Intent(this, SignalActivity::class.java))
-            // Finish the current activity
             finish()
-        }, 2000) // Delay of 2000 milliseconds (2 seconds)
+        }, 2000)
     }
 }

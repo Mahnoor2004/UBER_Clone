@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:droid="http://schemas.android.com/tools"
+    android:background="#090900">
+
+    <!-- Profile Section -->
+    <ImageView
+        android:id="@+id/profile_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_person_3_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mahnoor Nasar"
+        android:textColor="#FFFFFF"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/profile_icon"
+        app:layout_constraintTop_toTopOf="@id/profile_icon"
+        android:layout_marginStart="12dp"/>
+
+    <ImageView
+        android:id="@+id/profile_rating_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_star_rate_24"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/profile_icon"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        android:layout_marginStart="12dp" />
+
+    <TextView
+        android:id="@+id/profile_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.0"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/profile_rating_star"
+        app:layout_constraintTop_toTopOf="@id/profile_rating_star"
+        android:layout_marginStart="4dp"/>
+
+    <!-- Buttons: Help, Payment, Activity -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/profile_icon">
+
+        <Button
+            android:id="@+id/btn_help"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_rect_bg"
+            android:layout_height="95dp"
+            android:text="Help"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/baseline_help_24"
+            android:backgroundTint="#2C2C2C"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btn_payment"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="95dp"
+            android:background="@drawable/rounded_rect_bg"
+            android:text="Payment"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/baseline_payment_24"
+            android:backgroundTint="#2C2C2C"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btn_activity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_rect_bg"
+            android:layout_height="95dp"
+            android:text="Activity"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/baseline_density_small_24"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:backgroundTint="#2C2C2C"/>
+    </LinearLayout>
+
+    <!-- Safety Check-up and Privacy Check-up -->
+    <LinearLayout
+        android:id="@+id/checkup_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="2dp"
+
+
+        app:layout_constraintTop_toBottomOf="@id/button_container">
+
+        <LinearLayout
+            android:background="@drawable/rounded_rect_bg"
+            android:id="@+id/safety_checkup"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:backgroundTint="#2C2C2C"
+            android:orientation="horizontal"
+            android:padding="16dp"
+
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Safety check-up"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:text="1/7"
+                android:textColor="#888888"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/privacy_checkup"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_rect_bg"
+            android:backgroundTint="#2C2C2C"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_weight="1"
+                android:text="Privacy check-up"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/privacy_checkup" />
+
+            <ImageView
+                android:id="@+id/privacy_checkup_icon"
+                android:layout_width="122dp"
+                android:layout_height="127dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_privacy_checkup"
+                app:layout_constraintEnd_toEndOf="@id/privacy_checkup"
+                app:layout_constraintTop_toTopOf="@id/privacy_checkup" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom List Items -->
+    <LinearLayout
+        android:id="@+id/menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:backgroundTint="#2C2C2C"
+        app:layout_constraintTop_toBottomOf="@id/checkup_container">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Family"
+            android:layout_marginVertical="7dp"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/baseline_family_24"
+            android:drawablePadding="20dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:drawableStart="@drawable/baseline_miscellaneous_services_24"
+            android:drawablePadding="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginVertical="7dp"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Messages"
+            android:layout_marginVertical="7dp"
+            android:drawableStart="@drawable/baseline_markunread_24"
+            android:drawablePadding="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earn by driving or delivering"
+            android:drawableStart="@drawable/sharp_person_4_24"
+            android:drawablePadding="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="12dp"
+            android:layout_marginVertical="7dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set up your business profile"
+            android:drawableStart="@drawable/baseline_business_center_24"
+            android:drawablePadding="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginVertical="7dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage Uber accout"
+            android:drawableStart="@drawable/baseline_person_3_24"
+            android:drawablePadding="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginVertical="7dp"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Legal"
+            android:drawableStart="@drawable/baseline_new_releases_24"
+            android:drawablePadding="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginVertical="7dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

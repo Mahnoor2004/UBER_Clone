@@ -1,3 +1,4 @@
+
 package com.example.project_uber
 
 import android.content.Intent
@@ -37,12 +38,12 @@ class LoginActivity : AppCompatActivity() {
         }
 
         // Other buttons click listeners
+
         binding.continueButton.setOnClickListener {
             // Perform the action on "Continue" button click
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
         binding.emailButton.setOnClickListener {
             // Perform the action on "Continue with Email" button click
         }
