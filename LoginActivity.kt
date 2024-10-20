@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
 
         binding.continueButton.setOnClickListener {
             // Perform the action on "Continue" button click
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
         binding.emailButton.setOnClickListener {
@@ -76,7 +76,7 @@ class LoginActivity : AppCompatActivity() {
     private fun handleSignInResult(account: GoogleSignInAccount?) {
         if (account != null) {
             // Sign-in was successful, navigate to MainActivity
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish() // Finish LoginActivity so user can't go back
         }

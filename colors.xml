@@ -4,5 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFFFFC00</color>
     <color name="colorPrimary">#dddcdd</color>
+    <color name="colorPi">#6F6F6F</color>
+    <color name="colorAccent">#FF03DAC5</color>  <!-- Hover color -->
     <color name="background_color">#F7E4E4</color>
+    <color name="tone">#7C7C7C</color>
 </resources>

@@ -1,12 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#111111"
+    android:padding="16dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:id="@+id/title"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Services Fragment"
-        android:layout_gravity="center"/>
-</FrameLayout>
+        android:text="Services"
+        android:textSize="35sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+    />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Go anywhere, get anything"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <GridLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        android:rowCount="1"
+        android:columnCount="4">
+
+        <Button
+            android:id="@+id/btn_help"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@drawable/rounded_rect_bg"
+            android:text="Trip"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/car1"
+            android:backgroundTint="#2C2C2C"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_margin="4dp"
+            android:textSize="13sp"/>
+
+        <Button
+            android:id="@+id/btn_food"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@drawable/rounded_rect_bg"
+            android:text="Food"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/salad"
+            android:backgroundTint="#2C2C2C"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_margin="4dp"
+            android:textSize="13sp"/>
+
+        <Button
+            android:id="@+id/btn_reserve"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@drawable/rounded_rect_bg"
+            android:text="Reserve"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/reserve1"
+            android:backgroundTint="#2C2C2C"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_margin="4dp"
+            android:textSize="13sp"/>
+
+        <Button
+            android:id="@+id/btn_trip"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@drawable/rounded_rect_bg"
+            android:text="Package"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/package3"
+            android:backgroundTint="#2C2C2C"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_margin="4dp"
+            android:textSize="13sp"/>
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

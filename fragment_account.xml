@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#111111"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:droid="http://schemas.android.com/tools"
-    android:background="#090900">
+    android:layout_height="match_parent">
+
 
     <!-- Profile Section -->
     <ImageView
@@ -18,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:layout_marginVertical="10dp"
         android:id="@+id/profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -125,10 +128,12 @@
         <LinearLayout
             android:background="@drawable/rounded_rect_bg"
             android:id="@+id/safety_checkup"
-            android:layout_width="match_parent"
+            android:layout_width="386dp"
             android:layout_height="100dp"
             android:backgroundTint="#2C2C2C"
+            android:layout_marginVertical="7dp"
             android:orientation="horizontal"
+            android:layout_gravity="center"
             android:padding="16dp"
 
             android:gravity="center_horizontal">
@@ -153,12 +158,13 @@
 
         <LinearLayout
             android:id="@+id/privacy_checkup"
-            android:layout_width="match_parent"
+            android:layout_width="386dp"
             android:layout_height="100dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/rounded_rect_bg"
             android:backgroundTint="#2C2C2C"
             android:gravity="center_vertical"
+            android:layout_gravity="center"
             android:orientation="horizontal"
             android:padding="16dp">
 
@@ -186,6 +192,7 @@
 
     <!-- Bottom List Items -->
     <LinearLayout
+        android:layout_marginVertical="5dp"
         android:id="@+id/menu_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -195,23 +202,25 @@
         app:layout_constraintTop_toBottomOf="@id/checkup_container">
 
         <TextView
+            android:id="@+id/familyTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Family"
-            android:layout_marginVertical="7dp"
+            android:layout_marginVertical="10dp"
             android:textColor="#FFFFFF"
             android:drawableStart="@drawable/baseline_family_24"
             android:drawablePadding="20dp"
             android:textSize="16sp" />
 
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Settings"
             android:drawableStart="@drawable/baseline_miscellaneous_services_24"
             android:drawablePadding="20dp"
             android:textColor="#FFFFFF"
-            android:layout_marginVertical="7dp"
+            android:layout_marginVertical="10dp"
             android:layout_marginTop="12dp"
             android:textSize="16sp" />
 
@@ -219,7 +228,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Messages"
-            android:layout_marginVertical="7dp"
+            android:layout_marginVertical="10dp"
             android:drawableStart="@drawable/baseline_markunread_24"
             android:drawablePadding="20dp"
             android:textColor="#FFFFFF"
@@ -234,7 +243,7 @@
             android:drawablePadding="20dp"
             android:textColor="#FFFFFF"
             android:layout_marginTop="12dp"
-            android:layout_marginVertical="7dp"
+            android:layout_marginVertical="10dp"
             android:textSize="16sp" />
         <TextView
             android:layout_width="wrap_content"
@@ -243,7 +252,7 @@
             android:drawableStart="@drawable/baseline_business_center_24"
             android:drawablePadding="20dp"
             android:textColor="#FFFFFF"
-            android:layout_marginVertical="7dp"
+            android:layout_marginVertical="10dp"
             android:textSize="16sp" />
         <TextView
             android:layout_width="wrap_content"
@@ -252,7 +261,7 @@
             android:drawableStart="@drawable/baseline_person_3_24"
             android:drawablePadding="20dp"
             android:textColor="#FFFFFF"
-            android:layout_marginVertical="7dp"
+            android:layout_marginVertical="10dp"
             android:textSize="16sp" />
         <TextView
             android:layout_width="wrap_content"
@@ -261,7 +270,7 @@
             android:drawableStart="@drawable/baseline_new_releases_24"
             android:drawablePadding="20dp"
             android:textColor="#FFFFFF"
-            android:layout_marginVertical="7dp"
+            android:layout_marginVertical="10dp"
             android:textSize="16sp" />
     </LinearLayout>
 
