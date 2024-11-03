@@ -3,20 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    app:layout_constraintTop_toBottomOf="@id/tabLayout"
-    app:layout_constraintTop_toTopOf="@id/viewPager"
     android:layout_height="match_parent">
 
+    <!-- Search Container -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/searchContainer"
-        android:layout_width="350dp"
+        android:layout_width="365dp"
         android:layout_height="55dp"
-        android:layout_marginVertical="16dp"
+        app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/search_box_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="25dp"
         android:padding="8dp">
+
         <!-- Search Icon -->
         <ImageView
             android:id="@+id/searchIcon"
@@ -26,7 +26,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:tint="@android:color/white" />
+            android:tint="@android:color/white"
+            android:backgroundTint="@color/tone" />
 
         <!-- Search Hint (Where to?) -->
         <EditText
@@ -40,7 +41,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/timeButton"
-            android:paddingStart="8dp" />
+            android:paddingStart="8dp"
+            android:background="@null" />
 
         <!-- Time Button with Icon -->
         <LinearLayout
@@ -85,4 +87,155 @@
                 android:tint="@android:color/white" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Suggestions Row -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/suggestionsRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/searchContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- Suggestions Text -->
+        <TextView
+            android:id="@+id/suggestionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suggestions"
+            android:textColor="@android:color/white"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="19dp"
+            android:layout_marginVertical="19dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- See All Text (clickable) -->
+        <TextView
+            android:id="@+id/seeAllText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See all"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Rides Container -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/suggestionsRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btn_rides_trip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_rect_bg"
+            android:text="Trip"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/car1"
+            android:backgroundTint="@color/tone"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_margin="4dp"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_rides_reserve"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/tone"
+            android:background="@drawable/rounded_rect_bg"
+            android:text="Reserve"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/reserve1"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_margin="4dp"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_rides_package"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_rect_bg"
+            android:text="Package"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/package3"
+            android:backgroundTint="@color/tone"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_margin="4dp"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_rect_bg"
+        android:backgroundTint="#F1A6A2"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_container"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="65dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ready? Then let's roll."
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:text="Ride with Uber >>"
+                android:textColor="#000000"
+                android:textSize="19sp"
+                android:textStyle="italic"
+                android:paddingTop="8dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/car_enter"
+            android:contentDescription="Person entering a car" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
