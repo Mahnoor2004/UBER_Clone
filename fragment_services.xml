@@ -47,7 +47,7 @@
         android:columnCount="4">
 
         <Button
-            android:id="@+id/btn_help"
+            android:id="@+id/btn_trip"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -98,7 +98,7 @@
             android:textSize="13sp"/>
 
         <Button
-            android:id="@+id/btn_trip"
+            android:id="@+id/btn_package"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"

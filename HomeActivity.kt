@@ -33,7 +33,6 @@ class HomeActivity : AppCompatActivity() {
             true
         }
     }
-
     private fun loadFragment(fragment: Fragment) {
         // Replaces the fragment in the fragment_container
         supportFragmentManager.beginTransaction()

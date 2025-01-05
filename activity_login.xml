@@ -11,63 +11,78 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="start">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enter your mobile number"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_gravity="start"
-            android:textColor="@color/black"
-            android:layout_marginBottom="16dp" />
-
-        <LinearLayout
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:layout_height="350dp"
+            android:src="@drawable/car_enter"
+            android:layout_marginBottom="25dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp" />
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_flag_pakistan" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_enter_mobile"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Enter your mobile number"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_gravity="start"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:layout_marginBottom="16dp" />-->
 
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableRight="@drawable/ic_person"
-                android:hint="+92 Mobile number"
-                android:inputType="phone"
-                android:padding="12dp"
-                android:textColorHint="#8D6E63" />
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/layout_mobile_input"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_marginBottom="16dp">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/img_flag"-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:src="@drawable/ic_flag_pakistan" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/mobileEditText"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:drawableRight="@drawable/ic_person"-->
+<!--                android:hint="+92 Mobile number"-->
+<!--                android:inputType="phone"-->
+<!--                android:padding="12dp"-->
+<!--                android:textColor="#000000"-->
+<!--                android:focusable="true"-->
+<!--                android:focusableInTouchMode="true"-->
+<!--                android:textColorHint="#8D6E63" />-->
+<!--        </LinearLayout>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/continueButton"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Continue"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:padding="16dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:background="@color/black"-->
+<!--            android:drawablePadding="2dp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_or_1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="or"-->
+<!--            android:textColor="#565656"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginBottom="16dp" />-->
 
         <Button
-            android:id="@+id/continue_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Continue"
-            android:textSize="18sp"
-            android:textColor="@android:color/white"
-            android:padding="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/black"
-            android:drawablePadding="2dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="or"
-            android:textColor="#565656"
-            android:gravity="center"
-            android:layout_marginBottom="16dp" />
-
-        <Button
-            android:id="@+id/google_button"
+            android:id="@+id/googleButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Continue with Google"
@@ -82,10 +97,10 @@
             android:layout_marginBottom="16dp" />
 
         <Button
-            android:id="@+id/email_button"
+            android:id="@+id/phoneButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Continue with Email"
+            android:text="Continue with Phone"
             android:textSize="18sp"
             android:gravity="center"
             android:textStyle="bold"
@@ -95,15 +110,18 @@
             android:background="#cccccc"
             android:textColor="@android:color/black"
             android:layout_marginBottom="16dp" />
+
         <TextView
+            android:id="@+id/tv_or_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="or"
             android:textColor="#565656"
             android:gravity="center"
             android:layout_marginBottom="16dp" />
+
         <LinearLayout
-            android:id="@+id/find_account_layout"
+            android:id="@+id/layout_find_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -111,13 +129,14 @@
             android:layout_marginBottom="16dp">
 
             <ImageView
+                android:id="@+id/img_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_search"
                 android:layout_marginEnd="8dp" />
 
             <TextView
-                android:id="@+id/find_account_button"
+                android:id="@+id/tv_find_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Find my account"
@@ -128,6 +147,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_terms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="By proceeding, you consent to receiving calls, WhatsApp or SMS/RCS messages, including by automated means, from Uber and its affiliates to the number provided."

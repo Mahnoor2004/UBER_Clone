@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Menu items from the first menu -->
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+
+    <!-- Menu items from the second menu -->
+    <item
+        android:id="@+id/navigation_services"
+        android:icon="@drawable/baseline_miscellaneous_services_24"
+        android:title="Services" />
+
+    <item
+        android:id="@+id/navigation_activity"
+        android:icon="@drawable/baseline_density_small_24"
+        android:title="Activity" />
+
+    <item
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/ic_person"
+        android:title="Account" />
+
+</menu>
